@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "com.protobuf";
+option java_outer_classname = "ProtobufTemplate";
+option java_generic_services = false;
+option java_multiple_files = false;
+
+option optimize_for = SPEED; // SPEED, CODE_SIZE, LITE_RUNTIME
+
+message Message {
+    string message = 1;
+}
