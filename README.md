@@ -15,7 +15,7 @@ Documentation and more on designing of the `.proto` file can be found in the use
 
 ### 2. Changes to make before building with Maven
 Make the following changes to specify your artifact properties by changing the defaults.
-```
+```xml
 <groupId>com.protobuf</groupId>
 <artifactId>protobuf-template</artifactId>
 <version>0.0.1-SNAPSHOT</version>
@@ -23,8 +23,8 @@ Make the following changes to specify your artifact properties by changing the d
 <name>Protobuf Template</name>
 ```
 
-Also change the name of the artifact binary name under `properties` section.
-```
+Also change the name of the artifact binary name under `<properties>` section.
+```xml
 <properties>
     <artifact.name>protobuf-template</artifact.name>
 </properties>
