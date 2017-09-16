@@ -1,5 +1,7 @@
-# protobuf-template
-Protocol Buffers template ready for creating Java protobuf artifacts.
+# Java Protobuf Artifact
+Protocol Buffers template ready for creating Java protobuf artifacts. 
+
+Ideal for creating Java artifacts which can be distributed as a Maven artifact or segregated for re-use.
 
 # Useful Links
 - Protocol Buffers documentation: https://developers.google.com/protocol-buffers
@@ -9,7 +11,19 @@ Protocol Buffers template ready for creating Java protobuf artifacts.
 Design how you want your information for serialization to be structured in a `.proto` file and use Maven build tool to construct and build the `.proto` file into a Java artifact.
 
 ## 1. Designing your .proto file
-There is the template `.proto` file located under `src/main/proto`. Here you can create one or many `.proto` files. The end result will bundle all the `.proto` files into one Java artifact when built. 
+There is the template `.proto` file located under `src/main/proto`. Here you can create one or many `.proto` files. The end result will bundle all the `.proto` files into one Java artifact when built.
+
+Be sure to modify the `java_package` and `java_outter_classname` to the desired package and outter class name.
+```java
+syntax = "proto3";
+
+package proto;
+
+option java_package = "com.protobuf";
+option java_outer_classname = "ProtobufTemplate";
+option java_generic_services = false;
+option java_multiple_files = false;
+```
 
 Documentation and more on designing of the `.proto` file can be found in the useful link section.
 
